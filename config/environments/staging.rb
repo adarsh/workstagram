@@ -1,5 +1,6 @@
-Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])require Rails.root.join('config/initializers/smtp')Workstagram::Application.configure do
+Workstagram::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  #Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])require Rails.root.join('config/initializers/smtp')
 
   # Code is not reloaded between requests
   config.cache_classes = true
