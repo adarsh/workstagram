@@ -13,6 +13,11 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create(params[:photo])
-    respond_with(@photo)
+
+    if @photo.save
+      respond_with(@photo)
+    else
+      respond_with(errors: @photo.errors.full_messages)
+    end
   end
 end
