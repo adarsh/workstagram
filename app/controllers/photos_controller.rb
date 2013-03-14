@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.create(params[:photo])
+    @photo = Photo.new(image: params[:photo])
 
     if @photo.save
       respond_with(@photo)
